@@ -39,12 +39,14 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 核心内容：
 
 - SOC 技术架构设计原则
+- SOC 威胁分类框架（外部攻击 vs 内部威胁）
 - SIEM 平台（Splunk、QRadar、Sentinel）
+- **UEBA 与内部威胁检测**（内部威胁四象限模型、检测场景、建设路径）
 - SOAR 平台（Cortex XSOAR、Swimlane、Tines）
 - 威胁情报平台（TIP）
 - 日志管理与安全数据湖
 - SOC 工具栈集成架构
-- SIEM 中的 machine learning 威胁检测
+- 流处理引擎（CEP）在安全检测中的应用
 
 ### [11.3 威胁检测工程](11.3-threat-detection-engineering.md)
 
@@ -59,6 +61,7 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - 机器学习检测（machine learning-based detection）
 - UEBA（用户与实体行为分析）
 - MITRE ATT&CK 框架应用
+- **基于真实风险的规则建设框架**：通过攻击路径、活跃 TTP、资产脆弱性（CISA KEV）三个维度构建规则池，替代单一的 ATT&CK 覆盖率目标
 - 检测覆盖度评估
 
 ### [11.4 事件响应（IR）](11.4-incident-response.md)
