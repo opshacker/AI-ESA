@@ -6,6 +6,8 @@
 
 本章全面阐述企业级 SOC 的战略规划、架构设计、能力建设与运营管理，涵盖从组织模型到技术平台、从检测工程到事件响应、从威胁情报到指标体系的完整实践框架。
 
+> **与 AI 驱动安全运营的关系**：本章聚焦 SOC 核心能力与运营框架。关于 AI/ML 如何增强 SOC 能力（包括智能告警降噪、UEBA 异常检测、自动化响应编排、AI 辅助威胁狩猎等），请参阅 **[Chapter 14.3 AI for SecOps](../../part_05_ai_driven_security_innovation/chapter_14_ai_for_security/14.3_ai_for_secops.md)**。本章各节已在相关主题处增加了与 14.3 的交叉引用。
+
 核心价值：
 
 - 战略对齐：将 SOC 运营纳入企业安全战略与业务目标，建立从董事会到执行层的治理体系
@@ -63,6 +65,12 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - MITRE ATT&CK 框架应用
 - **基于真实风险的规则建设框架**：通过攻击路径、活跃 TTP、资产脆弱性（CISA KEV）三个维度构建规则池，替代单一的 ATT&CK 覆盖率目标
 - 检测覆盖度评估
+- **Detection-as-Code 2025-2026 更新**（新增）：
+  - Sigma Specification 2.0（关联规则、过滤器、JSON Schema）
+  - OCSF 数据标准集成
+  - AI 辅助检测规则生成与质量控制
+  - 闭环反馈机制（SOAR→Git 联动）
+  - 合规与审计要求（ISO 42001、SOC 2 Type II、业务逻辑测试）
 
 ### [11.4 事件响应（IR）](11.4-incident-response.md)
 
@@ -108,6 +116,9 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - 误报处理与规则调优
 - 监控覆盖度（coverage）评估
 - 监控指标（MTTD、MTTR、MTTA）
+- **AIOps 与安全运营融合**（2025 新增）
+- **Security + Observability 融合**（2025 新增）
+- **安全监控成熟度模型（SMMM）**（2025 新增）
 
 ### [11.7 漏洞管理](11.7-vulnerability-management.md)
 
@@ -121,6 +132,9 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - 补丁管理流程与自动化
 - 虚拟补丁（virtual patching）
 - 漏洞管理与 SOC 集成
+- **CTEM 持续威胁暴露管理框架**（2025 新增）
+- **攻击面管理（ASM/EASM）**（2025 新增）
+- **SBOM 与软件供应链漏洞管理**（2025 新增）
 
 ### [11.8 SOC 指标与报告](11.8-soc-metrics-reporting.md)
 
@@ -175,6 +189,15 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - **MTTD (Mean Time To Detect)**：平均检测时间
 - **MTTR (Mean Time To Respond)**：平均响应时间
 - **MTTA (Mean Time To Acknowledge)**：平均确认时间
+- **CTEM (Continuous Threat Exposure Management)**：持续威胁暴露管理，Gartner 2022 提出的主动式漏洞管理框架
+- **ASM (Attack Surface Management)**：攻击面管理，持续发现与监控组织暴露的资产与风险
+- **EASM (External Attack Surface Management)**：外部攻击面管理，聚焦互联网可见的资产发现
+- **SBOM (Software Bill of Materials)**：软件物料清单，记录软件组件与依赖关系
+- **AIOps (AI for IT Operations)**：智能运维，将 AI/ML 应用于 IT 运营自动化
+- **Observability**：可观测性，通过 Metrics/Logs/Traces 实现系统状态的深度洞察
+- **Detection-as-Code**：检测即代码，将检测规则纳入版本控制与 CI/CD 管道
+- **Purple Team**：紫队，红蓝团队协作模式，实时验证与改进检测能力
+- **ITDR (Identity Threat Detection and Response)**：身份威胁检测与响应
 
 ## 核心框架
 
@@ -184,6 +207,8 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - Cyber Kill Chain：网络杀伤链模型
 - Diamond Model：钻石模型威胁分析框架
 - VERIS (Vocabulary for Event Recording and Incident Sharing)：事件记录与共享词汇表
+- **CTEM (Continuous Threat Exposure Management)**：Gartner 持续威胁暴露管理框架（2025 新增）
+- **SMMM (Security Monitoring Maturity Model)**：安全监控成熟度模型（2025 新增）
 
 ## 技术栈概览
 
@@ -293,6 +318,25 @@ SOC 建设的三个核心困境、本章目标与关键成功要素。
 - 自动化生成合规报告
 - 与 GRC 团队紧密协作
 - 实施持续合规监控
+
+## 2025 更新日志
+
+本章已根据 2025 年行业最新实践进行全面优化，新增内容包括：
+
+| 章节 | 新增内容 | 说明 |
+|------|----------|------|
+| 11.0 | 2025 趋势展望 | 三大核心趋势：AI 原生安全运营、云原生 SOC、统一平台整合 |
+| 11.1 | SOC-as-Code、远程/混合 SOC | 基础设施即代码实践、分布式团队运营模式、Burnout 预防 |
+| 11.2 | Cloud-Native SOC、开源 SOC 技术栈 | 云原生架构设计、开源 SIEM/SOAR 选型、成本优化策略 |
+| 11.3 | Detection-as-Code 2025-2026、Purple Team、ITDR | 检测规则 CI/CD 管道、**Sigma 2.0**（关联规则、过滤器）、**OCSF 数据标准**、**AI 辅助规则生成**、闭环反馈机制、ISO 42001/SOC 2 Type II 合规要求、紫队协作模式、身份威胁检测 |
+| 11.4 | 勒索软件专项响应、Cloud IR | 勒索软件决策框架、云环境事件响应、法律保全最佳实践 |
+| 11.5 | 暗网情报、地缘政治、TI 质量评分 | 暗网监控策略、地缘政治风险分析、情报源质量评估框架 |
+| 11.6 | AIOps 融合、Observability 融合、SMMM | AIOps × 安全运营、Security + Observability 统一、监控成熟度模型 |
+| 11.7 | CTEM 框架、ASM/EASM、SBOM | 持续威胁暴露管理、攻击面管理、软件供应链漏洞管理 |
+
+> **交叉引用**：关于 AI 如何增强 SOC 能力的详细内容，请参阅 [Chapter 14.3 AI for SecOps](../../part_05_ai_driven_security_innovation/chapter_14_ai_for_security/14.3_ai_for_secops.md)。
+
+---
 
 ## 学习资源
 
