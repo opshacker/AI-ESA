@@ -1,0 +1,14 @@
+# Instructions
+
+## Purpose
+This template is designed to help track hosted devices and their access methods effectively.
+
+## Version
+1.0
+
+## Filling Instructions
+Please fill in the details for each device in the 'Inventory' sheet. Ensure all data is accurate to facilitate management.
+
+## Example Row
+| Device ID | Device Category | Device Name | Mgmt IP/Hostname | Location | Model_OS_Version | Role | Owner Name | Owner Email | Owner Phone | Current Access Method | Allow MSSP Remote Access | Authorized Access Level | Allowed Operations | Access Methods Allowed | Authentication Method | Credential Vault Path | Access Source Restriction | Jump Host IPs | MFA Required | Session Recording Required | Backup Config Location | Audit Log Retention Days | SecurityOps | Log Type | Log Collection Endpoint | Log Protocol | Log Format | Log Retention Days | Notes |
+| D-001 | Firewall | FW-BORDER-01 | 10.0.0.1 | DC1 | VendorX v12.3 | edge | Zhang San | zhangsan@example.com | +86-10-12345678 | SSH | Yes | ReadOnly | show running-config | SSH | SSH Key | SSH:/vault/keys/fw-border-01 | JumpHost Only | 203.0.113.10 | Yes | Yes | sftp://backup.example.com/fw/fw-border-01.conf | 365 | Yes | Firewall Events | siem-collector-01:514 | Syslog-TCP | CEF | 365 | HA pair
